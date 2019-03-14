@@ -20,5 +20,8 @@
   "dependencies": {
     "leancloud-realtime": "^4.3.0",
     "leancloud-storage": "^3.12.0"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
   }
 }
