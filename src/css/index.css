@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'iconfont';  /* project id 828172 */
+    src: url('//at.alicdn.com/t/font_828172_oi5iyotv8ih.eot');
+    src: url('//at.alicdn.com/t/font_828172_oi5iyotv8ih.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_828172_oi5iyotv8ih.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_828172_oi5iyotv8ih.woff') format('woff'),
+    url('//at.alicdn.com/t/font_828172_oi5iyotv8ih.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_828172_oi5iyotv8ih.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+.index-wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+
+.bar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.topBar {
+    height: 60px;
+    background: #E72627;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-title {
+    line-height: 25px;
+    color: white;
+    margin-left: 12px;
+}
+
+.download {
+    border: 1px solid white;
+    height: 30px;
+    width: 80px;
+    border-radius: 10px;
+    line-height: 30px;
+    font-size: 15px;
+    color: #fff;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.topNavBar > ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 35px;
+    border-bottom: 1px solid #eee;
+    background: white;
+}
+
+.topNavBar > ul > li {
+    line-height: 35px;
+}
+
+.topNavBar-item {
+    border-bottom: 3px solid transparent;
+    padding-bottom: 6px;
+    color: black;
+}
+
+.topNavBar-item.active {
+    border-bottom: 3px solid red;
+    padding-bottom: 6px;
+    color: red;
+}
+
+.recommend-songs {
+    margin-top: 116px;
+}
+
+.recommend-title {
+    line-height: 20px;
+    margin: 18px 0;
+    padding-left: 8px;
+    border-left: 3px solid red;
+}
+
+.recommend-songs > ul {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.recommend-songs > ul > li {
+    width: 33%;
+}
+
+.img-wrap {
+    position: relative;
+}
+
+.img-wrap > img {
+    width: 100%;
+    height: 100%;
+}
+
+.lisners {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    color: white;
+    font-size: 13px;
+}
+
+.newest-song {
+
+}
+
+.recommend-songs > ul > li > p {
+    margin: 6px 6px 20px 6px;
+    line-height: 16px;
+    font-size: 14px;
+}
+
+.song-info {
+    height: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.song-name {
+    margin: 5px;
+}
+
+.song-author {
+    margin: 5px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.newest-song ul > li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.play-icon {
+    margin: auto 0;
+}
+
+.play-icon > i {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 24px !important;
+}
+
+footer {
+    padding: 80px 0;
+    height: 100px;
+    background: url("../assets/index-background.png") no-repeat;
+}
+
+footer > p:nth-child(1) {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+footer > p:nth-child(1) > i {
+    font-size: 24px !important;
+    margin-right: 5px;
+    background: #E72627;
+}
+
+.footer-download {
+    border: 1px solid red;
+    padding: 12px 0;
+    margin: 0 15px;
+    border-radius: 40px;
+    text-align: center;
+    color: #E72627;
+}
+
+.copyright {
+    font-size: 11px;
+    text-align: center;
+}
