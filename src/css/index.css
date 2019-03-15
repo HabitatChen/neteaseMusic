@@ -188,4 +188,5 @@ footer > p:nth-child(1) > i {
 .copyright {
     font-size: 11px;
     text-align: center;
+    margin-top: 5px;
 }

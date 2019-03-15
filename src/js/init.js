@@ -22,3 +22,5 @@ musicSong.save({
 }).then(function(object) {
 	alert('LeanCloud Rocks!');
 })
+
+
