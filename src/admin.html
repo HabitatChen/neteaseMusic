@@ -15,12 +15,18 @@
     <main class="main-content">
       <div class="song-list">
         <div>
+          <div class="new-song">
+          </div>
+          <p>歌曲列表</p>
+          <div class="song-list-item">
+          </div>
+          <!-- 歌单页面
           <div class="aside-title">
             <span class="song-name">歌名</span>
             <span class="author">歌手</span>
             <span class="url">链接</span>
           </div>
-          <ul class="song-items">
+          <ul class="song-items" id="song-items">
             <li class="song-item-detail">
               <span class="song-index">1</span>
               <span class="song-name">111</span>
@@ -38,34 +44,14 @@
               <span class="song-name">111</span>
               <span class="author">222</span>
               <span class="url">333</span>
-          </li>
+            </li>
           </ul>
+          -->
         </div>
         <div id='upload' class="upload">
-          <div id="pickfiles" class="pickfiles">
-            <span id="">点击或拖拽上传文件</span>
-            <span id="stats"></span>
-          </div>
         </div>
       </div>
       <div class="song-description">
-        <ul>
-          <li id="menu-1" class="memu-content">
-            <p>音乐标题：aaa</p>
-            <p>音乐作者：aaa</p>
-            <p>音乐时长：aaa</p>
-          </li>
-          <li id="menu-2" class="memu-content menu-2">
-            <p>音乐标题：xxx</p>
-            <p>音乐作者：xxx</p>
-            <p>音乐时长：xxx</p>
-          </li>
-          <li id="menu-3" class="memu-content">
-            <p>音乐标题：ccc</p>
-            <p>音乐作者：ccc</p>
-            <p>音乐时长：ccc</p>
-          </li>
-        </ul>
       </div>
     </main>
   </div>
@@ -73,8 +59,12 @@
 	<script src='../node_modules/leancloud-storage/dist/av-min.js'></script>
   <script src="../node_modules/plupload/js/plupload.min.js"></script>
 	<script src='../node_modules/qiniu-js/dist/qiniu.min.js'></script>
+  <script src="js/inicialize/init.js"></script>
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/admin.js"></script>
-  <script src="./js/qiniu-init.js"></script>
+  <script src="js/event-hub.js"></script>
+  <script src="js/new-song.js"></script>
+  <script src="js/song-list-item.js"></script>
+  <script src="js/upload.js"></script>
+  <script src="js/song-description.js"></script>
 </body>
 </html>

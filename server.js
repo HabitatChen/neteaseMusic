@@ -32,7 +32,7 @@ var server = http.createServer(function(request, response) {
 		var mac = new qiniu.auth.digest.Mac(accessKey, secretKey);
 		var options = {
 			// 后面跟着的是篮子的名字
-			scope: 'music163-demo',
+			scope: 'netease-music',
 		};
 		var putPolicy = new qiniu.rs.PutPolicy(options);
 		var uploadToken=putPolicy.uploadToken(mac);

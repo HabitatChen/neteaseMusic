@@ -13,22 +13,65 @@
 }
 
 .admin-wrapper > main {
-    width: 1200px;
-    height: 600px;
-    border: 1px solid black;
+    width: 100%;
+    height: 100%;
     display: flex;
+    border: 1px solid black;
 }
 
+.new-song {
+    background: #d20016;
+    text-align: center;
+    padding: 20px 0;
+    margin: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.new-song:hover {
+    cursor: pointer;
+}
 
 .main-content {
     position: relative;
 }
 
 .song-list {
-    width: 30%;
+    width: 20%;
     height: 100%;
-    border: 1px solid black;
+}
 
+.song-list > div > p {
+    height: 40px;
+    line-height: 40px;
+    background: #d20016;
+    color: white;
+    text-align: center;
+}
+
+.song-list-item {
+    width: 100%;
+    height: 100%;
+}
+
+.song-list-item li {
+
+}
+
+.song-list-item li.active {
+    background: #eee;
+    color: #43b67a;
+}
+
+.song-style {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    margin: 0 10px;
+}
+
+.song-style:hover {
+    cursor: pointer;
+    color: #43b67a;
 }
 
 .song-items > li {
@@ -70,10 +113,9 @@
 
 .upload {
     height: 20%;
-    width: 30%;
+    width: 20%;
     background: white;
     position: absolute;
-    border: 1px solid black;
     left: 0;
     bottom: 0;
     display: flex;
@@ -110,4 +152,33 @@
 
 .memu-content.active {
     display: block;
+}
+
+.song-description {
+    background: #eee;
+    width: 80%;
+}
+
+.song-detail {
+    margin: 15px;
+    background: #eee;
+}
+
+.song-detail > div {
+    margin: 5px 0;
+    height: 30px;
+    line-height: 30px;
+}
+
+.song-detail input[type=text] {
+    border: 1px solid #eee;
+    padding: 5px 0;
+}
+
+.song-detail input[type=submit] {
+    display: block;
+    width: 80px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 155px;
 }
