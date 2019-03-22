@@ -55,26 +55,38 @@
 .topNavBar > ul {
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    height: 35px;
     border-bottom: 1px solid #eee;
     background: white;
 }
 
 .topNavBar > ul > li {
+    display: block;
+    height: 35px;
     line-height: 35px;
-}
-
-.topNavBar-item {
-    border-bottom: 3px solid transparent;
-    padding-bottom: 6px;
     color: black;
+    border-bottom: 2px solid transparent;
+    text-align: center;
+    flex-grow: 1;
 }
 
-.topNavBar-item.active {
-    border-bottom: 3px solid red;
-    padding-bottom: 6px;
+.topNavBar > ul > li.active{
     color: red;
+    border-bottom: 2px solid red;
+}
+
+.topNavBar-item > .topNavBar-item-text {
+}
+
+.page-tap-content {
+    margin-top: 116px;
+}
+
+.page-1,.page-2,.page-3 {
+    display: none;
+}
+
+.page-1.active,.page-2.active,.page-3.active{
+    display: block;
 }
 
 .recommend-songs {
@@ -141,7 +153,7 @@
     color: #aaa;
 }
 
-.newest-song ul > li {
+.newly-song ul > li {
     display: flex;
     justify-content: space-between;
 }

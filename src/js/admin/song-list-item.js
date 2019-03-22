@@ -49,6 +49,24 @@
       this.model.fetch().then(() => {
         this.view.render(this.model.data)
       })
+      this.bindEventHub()
+    },
+    bindEvents() {
+      // 监听点击事件，然后触发一个eventHub让song-descrpiption知道
+      $(this.view.el).on('click', 'li', (e) => {
+        this.view.active(e.currentTarget)
+        let songId = e.currentTarget.getAttribute('data-song-id')
+        let data = {}
+        this.model.data.songs.forEach((song) => {
+          if (song.id === songId) {
+            data = song
+          }
+        })
+        // 在被点击的时候向外发射一个事件，然后在song-decription中订阅一下
+        window.eventHub.emit('select', JSON.parse(JSON.stringify(data)))
+      })
+    },
+    bindEventHub() {
       window.eventHub.on('upload', () => {
         this.view.clearActive()
       })
@@ -69,21 +87,6 @@
             li[index].classList.add('active')
           }
         })
-      })
-    },
-    bindEvents() {
-      // 监听点击事件，然后触发一个eventHub让song-descrpiption知道
-      $(this.view.el).on('click', 'li', (e) => {
-        this.view.active(e.currentTarget)
-        let songId = e.currentTarget.getAttribute('data-song-id')
-        let data = {}
-        this.model.data.songs.forEach((song) => {
-          if (song.id === songId) {
-            data = song
-          }
-        })
-        // 在被点击的时候向外发射一个事件，然后在song-decription中订阅一下
-        window.eventHub.emit('select', JSON.parse(JSON.stringify(data)))
       })
     }
   }

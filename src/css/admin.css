@@ -12,6 +12,50 @@
     flex-direction: column;
 }
 
+.admin-loading {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    display: none;
+}
+
+.admin-loading.active {
+    display: block;
+}
+
+@keyframes admin-loding {
+    0% {
+        transform: scale(0.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.admin-loading::before {
+    content: '';
+    display: block;
+    width: 100px;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    height: 100px;
+    border-radius: 50%;
+    background: #43b67a;
+    animation: admin-loding 1s infinite linear alternate-reverse;
+}
+
+.admin-wrapper > h1 {
+    padding: 20px;
+    border-radius: 10px;
+    background: #43b67a;
+    color: white;
+}
+
 .admin-wrapper > main {
     width: 100%;
     height: 100%;
@@ -20,7 +64,7 @@
 }
 
 .new-song {
-    background: #d20016;
+    background: #43b67a;
     text-align: center;
     padding: 20px 0;
     margin: 10px;
@@ -44,7 +88,7 @@
 .song-list > div > p {
     height: 40px;
     line-height: 40px;
-    background: #d20016;
+    background: #43b67a;
     color: white;
     text-align: center;
 }

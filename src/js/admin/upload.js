@@ -45,12 +45,14 @@
           },
           'BeforeUpload': function(up, file) {
             // 每个文件上传前,处理相关的事情
+            window.eventHub.emit('boforeUpload')
           },
           'UploadProgress': function(up, file) {
             // 每个文件上传时,处理相关的事情
             stats.innerText = '文件上传中'
           },
           'FileUploaded': function(up, file, info) {
+            window.eventHub.emit('afterUpload')
             stats.innerText = '文件上传完毕'
             // 每个文件上传成功后,处理相关的事情
             // 其中 info.response 是文件上传成功后，服务端返回的json，形式如
@@ -62,7 +64,7 @@
 
             var domain = up.getOption('domain');
             var res = JSON.parse(info.response);
-            var sourceLink = 'https://' + domain + '/' + encodeURI(res.key); //获取上传成功后的文件的Url
+            var sourceLink = 'http://' + domain + '/' + encodeURI(res.key); //获取上传成功后的文件的Url
             var songInfo = res.key.split('.')[0].split('-')
             var name = songInfo[0]
             var author = songInfo[1]
