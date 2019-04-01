@@ -10,6 +10,7 @@
 </head>
 <body>
   <div class="song-detail-wrapper" id="wrapper">
+    <audio src="#"></audio>
     <div class="song-dist-wrap">
       <div class="disc">
         <div class="disc-cover">
@@ -23,8 +24,17 @@
         <img src="./img/bang.png" alt="">
       </div>
     </div>
-    <div class="song-lyric"></div>
+    <section class="song-lyric">
+      <div class="lyric-window">
+        <div class="song-lines"></div>
+      </div>
+    </section>
   </div>
+  <script>
+    function log(text) {
+      return console.log(text)
+    }
+  </script>
   <script src="js/moxie.js"></script>
   <script src='../node_modules/leancloud-storage/dist/av-min.js'></script>
   <script src="../node_modules/plupload/js/plupload.min.js"></script>

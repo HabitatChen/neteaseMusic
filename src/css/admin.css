@@ -214,6 +214,14 @@
     line-height: 30px;
 }
 
+.song-detail > textarea {
+
+}
+
+.song-detail > .submitBtn {
+    margin-top: 200px;
+}
+
 .song-detail input[type=text] {
     border: 1px solid #eee;
     padding: 5px 0;

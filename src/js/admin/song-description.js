@@ -21,12 +21,19 @@
               <input name="sourceLink" type="text" value="__sourceLink__">
             </labe>
           </div>
-          <div class="row">
+          <div class="lyric">
+            <labe>歌词：
+              <textarea rows="10" cols="100"  name="songLyric"></textarea>
+            </labe>
+          </div>
+          <div class="row submitBtn">
             <input type="submit">
           </div>
         </form>
     `,
     render(data = {}) {
+      console.log('this is i render data')
+      console.log(data)
       // render的时候如果没有传入数据就使用空对象
       let placeholders = ['author', 'name', 'sourceLink', 'id']
       let html = this.template
@@ -37,6 +44,7 @@
       let h1 = $('<h1></h1>')
       data.id ? h1.text('编辑歌曲') : h1.text('新建歌曲')
       $(this.el).html(html)
+      $(this.el).find('textarea').text(data.songLyric)
       this.$el.find('form').prepend(h1)
     },
     reset() {
@@ -48,6 +56,7 @@
       'name': '',
       'author': '',
       'sourceLink': '',
+      'songLyric': '',
       'id': ''
     },
     save(data) {
@@ -58,6 +67,7 @@
       musicSong.set('name', data.name)
       musicSong.set('author', data.author)
       musicSong.set('sourceLink', data.sourceLink)
+      musicSong.set('songLyric', data.songLyric)
       return musicSong.save().then((newSong) => {
         let {id, attributes} = newSong
         Object.assign(this.data, {
@@ -73,6 +83,7 @@
       song.set('name', data.name);
       song.set('author', data.author);
       song.set('sourceLink', data.sourceLink);
+      song.set('songLyric', data.songLyric);
       // 保存到云端
       return song.save()
     }
@@ -90,14 +101,14 @@
       this.view.$el.on('submit', 'form', (e) => {
         e.preventDefault()
         // 获得每个input中的值
-        var data = {}
+        let data = {}
         let strings = 'name author sourceLink'.split(' ')
         strings.map((string) => {
           data[string] = this.view.$el.find(`[name="${string}"]`).val()
         })
+        console.log(this.view.$el.find(`textarea[name="songLyric"]`).val())
+        data.songLyric = this.view.$el.find(`textarea[name="songLyric"]`).val()
         if (!this.model.data.id) {
-          console.log('this is create data')
-          console.log(data)
           this.model.save(data).then(() => {
             this.view.reset({})
             window.eventHub.emit('create',JSON.parse(JSON.stringify(this.model.data)))

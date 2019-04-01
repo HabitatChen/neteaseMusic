@@ -19,7 +19,7 @@
 
 .song-dist-wrap {
     width: 100%;
-    border: 1px solid red;
+    border: 1px solid transparent;
 }
 
 .disc {
@@ -89,4 +89,26 @@
 .bang > img {
     width: 100%;
     height: 100%;
+}
+
+.song-lyric {
+    margin-top: 30px;
+    color: white;
+}
+
+.song-lyric p {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.song-lyric-content.active {
+    color: blue;
+}
+
+.lyric-window {
+    width: 300px;
+    height: 150px;
+    border: 1px solid transparent;
+    margin: auto;
+    overflow: auto;
 }
